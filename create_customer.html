@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<title>Ten65 | Dashboard</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+
+<!-- Begin Plugin Styles (Bootstrap 3.0) -->
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/datepicker3.css">
+
+<!-- Begin custom styles -->
+<link rel="stylesheet" href="./css/style.css" />
+
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body class="">
+<!-- Page Header -->
+<div class="page-header">
+	<div class="page-header-inner">
+		<!-- Page Header Logo -->
+		<div class="page-logo">
+			<a href="index.html">
+			<img src="./images/logo.png" alt="logo" class="logo-default"/>
+			</a>
+			<div class="menu-toggler sidebar-toggler hide">
+			</div>
+		</div>
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<div class="top-menu">
+			<ul class="nav navbar-nav pull-right">
+				<li class="dropdown dropdown-extended"><a><span class="size-20"><i class="fa fa-bell-o"></i><span><span class="badge">4</span></a></li>
+                <li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="size-24 font-eli">Steel Good Service  <i class="fa fa-angle-down"></i></span></a>
+                </li>               
+                <li><a><img src="./images/signin.png" /></a></li>				
+				
+				<!-- END INBOX DROPDOWN -->
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<!-- Page Container -->
+<div class="page-container">
+	<!-- Page Sidebar -->
+	<div class="page-sidebar navbar-collapse">
+		<ul class="page-sidebar-menu" >
+			<li>
+				<a href="index.html">
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="carriers.html">
+					<span>Carriers</span>
+				</a>
+			</li>
+			<li  class="active">
+				<a href="">
+					<span>Customer</span>
+                    <span class="selected"></span>
+				</a>
+			</li>
+			<li>
+				<a href="carrier.html">
+					<span>Carrier Rates</span>
+				</a>
+			</li>
+			<li>
+				<a href="billing.html">
+					<span>Billing</span>
+				</a>
+			</li>
+			<li>
+				<a href="kpis.html">
+					<span>KPIs</span>
+				</a>
+			</li>
+			<li>
+				<a href="doc-hub.html">
+					<span>Doc Hub</span>
+				</a>
+			</li>
+			<li>
+				<a href="live-tracking.html">
+					<span>Live Tracking</span>
+				</a>
+			</li>
+			<li>
+				<a href="fav-driver.html">
+					<span>Fav Driver</span>
+				</a>
+			</li>
+			<li>
+				<a href="api-center.html">
+					<span>API Center</span>
+				</a>
+			</li>
+			<li>
+				<a href="help.html">
+					<span>Help</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- Page Content -->
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			 <!-- Page Menu bar -->
+		     <div class="page-top-bar">
+		     	<div class="page-name">
+		     		<span class="size-20 font-reg">Customer</span>
+		     	</div>
+		     </div>
+		     <!-- Page Body -->
+		     <div class="page-body create-customer">
+                <div class="row">
+                    <div class="col-md-9 no-left-padding">
+                    <h1>Add Customer</h1>
+                    <div class="col-md-12 no-left-padding">
+                        <div class="col-md-6 col-sm-6 form-group no-left-padding">
+                            <label for="id">Customer ID</label>
+                            <input type="text" class="form-control" id="id" placeholder="Enter your CustomerID">
+                        </div>
+                        <div class="col-md-6 col-sm-6 form-group no-right-padding">
+                            <label for="name">Customer Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your Name">
+                        </div>
+                    </div>
+                    <div class="col-md-12 no-left-padding">
+                        <div class="col-md-6 col-sm-6 form-group no-left-padding">
+                            <label for="email">Contact E-mail</label>
+                            <input type="text" class="form-control" id="email" placeholder="Enter your E-mail">
+                        </div>
+                        <div class="col-md-6 col-sm-6 form-group no-right-padding">
+                            <label for="phonenumber">Contact Number</label>
+                            <input type="text" class="form-control" id="phonenumber" placeholder="Enter your Phone Number">
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-group no-left-padding address">
+                        <label for="address">Address</label>
+                            <textarea class="form-control" id="address" placeholder="Enter your address" rows="5"></textarea> 
+                    </div>
+                    <div class="col-md-12 no-left-padding">
+                        <div class="col-md-4 col-sm-4 form-group no-left-padding">
+                            <label for="name">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Select City">
+                        </div>
+                        <div class="col-md-4 col-sm-4 form-group state">
+                            <label for="name">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="Select State">
+                        </div>
+                         <div class="col-md-4 col-sm-4 form-group no-right-padding">
+                            <label for="zipcode">Zip Code</label>
+                            <input type="text" class="form-control" id="zipcode" placeholder="ZipCode">
+                        </div>
+                    </div>
+                    <div class="col-md-12 no-left-padding" style="margin-top: 35px;">
+                        <button class="btn btn-md btn-orange">
+                            SAVE
+                        </button>
+                        <button class="btn btn-md btn-default">
+                            CANCEL
+                        </button>
+                    </div>
+                </div>
+                </div>
+		     </div>
+		</div>
+	</div>
+</div>
+</body>
+
+<!-- Begin Plugin JS (Bootstrap3.0) -->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="./js/datatables.js"></script>
+<script type="text/javascript" src="./js/filter/range-date.js"></script>
+<script type="text/javascript" src="./js/filter/category.js"></script>
+
+<script type="text/javascript">
+$('.date-picker').datepicker();
+	$(document).ready(function() {
+    $('#datatable').DataTable({
+  "dom": '<"row pull-right"f><"row"t><"row pull-right"lp>'
+});
+   
+} );
+    $("#search_demo").keyup(function(){
+        $("#example_filter input[type='search']").val($(this).val());
+        $("#example_filter input[type='search']").keyup();
+    });
+</script>
+
+
+</html>

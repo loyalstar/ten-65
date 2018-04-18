@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<title>Ten65 | Dashboard</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+
+<!-- Begin Plugin Styles (Bootstrap 3.0) -->
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/datepicker3.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
+
+<!-- Begin custom styles -->
+<link rel="stylesheet" href="./css/style.css" />
+
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body class="">
+<!-- Page Header -->
+<div class="page-header">
+	<div class="page-header-inner">
+		<!-- Page Header Logo -->
+		<div class="page-logo">
+			<a href="index.html">
+			<img src="./images/logo.png" alt="logo" class="logo-default"/>
+			</a>
+			<div class="menu-toggler sidebar-toggler hide">
+			</div>
+		</div>
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<div class="top-menu">
+			<ul class="nav navbar-nav pull-right">
+                <li class="dropdown dropdown-extended"><a><span class="size-20"><i class="fa fa-bell-o"></i><span><span class="badge">4</span></a></li>
+				<li class="dropdown">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="size-24 font-eli">Steel Good Service  <i class="fa fa-angle-down"></i></span></a>
+				</li>				
+                <li><a><img src="./images/signin.png" /></a></li>
+				
+				<!-- END INBOX DROPDOWN -->
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<!-- Page Container -->
+<div class="page-container">
+	<!-- Page Sidebar -->
+	<div class="page-sidebar navbar-collapse">
+		<ul class="page-sidebar-menu" >
+			<li class="active">
+				<a href="javascript:;">
+					<span>Dashboard</span>
+					<span class="selected"></span>
+				</a>
+			</li>
+			<li>
+				<a href="carriers.html">
+					<span>Carriers</span>
+				</a>
+			</li>
+			<li>
+				<a href="customer.html">
+					<span>Customer</span>
+				</a>
+			</li>
+			<li>
+				<a href="carrier.html">
+					<span>Carrier Rates</span>
+				</a>
+			</li>
+			<li>
+				<a href="billing.html">
+					<span>Billing</span>
+				</a>
+			</li>
+			<li>
+				<a href="kpis.html">
+					<span>KPIs</span>
+				</a>
+			</li>
+			<li>
+				<a href="doc-hub.html">
+					<span>Doc Hub</span>
+				</a>
+			</li>
+			<li>
+				<a href="live-tracking.html">
+					<span>Live Tracking</span>
+				</a>
+			</li>
+			<li>
+				<a href="fav-driver.html">
+					<span>Fav Driver</span>
+				</a>
+			</li>
+			<li>
+				<a href="api-center.html">
+					<span>API Center</span>
+				</a>
+			</li>
+			<li>
+				<a href="help.html">
+					<span>Help</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- Page Content -->
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			 <!-- Page Menu bar -->
+		     <div class="page-top-bar">
+		     	<div class="page-name">
+		     		<span class="size-20 font-reg">Dashboard</span>
+		     	</div>
+		     </div>
+		     <!-- Page Body -->
+		     <div class="page-body dashboard">
+             <div class="row form-inline">
+                 <div class="form-group has-feedback">
+                    <select class="form-control dark " id="mode">
+                        <option value="">Sort</option>
+                        <option value="Intransit">In Transit</option>
+                        <option value="Loading ">Loading </option>
+                        <option value="Delivering ">Delivering </option>
+                        <option value="Quote">Quote</option>
+                    </select>
+                 </div>
+                 <div class="form-group">
+                    <input class="form-control form-control-inline input-medium date-picker table-form" id="start-date" size="16" type="text" value="" placeholder="From">
+                    <span><i class="fa fa-calendar"></i></span>
+                 </div>
+                 <div class="form-group">
+                     <input class="form-control form-control-inline input-medium date-picker table-form" id="last-date" size="16" type="text" value="" placeholder="To">
+                    <span><i class="fa fa-calendar"></i></span>
+                 </div>
+                 <div class="form-group has-feedback">
+                    <input type="text" class="form-control table-form" id="search_demo" placeholder="Search">
+                    <span class="form-control-feedback"><i class="fa fa-search"></i></span>
+                 </div>
+                 <div class="form-group pull-right">
+                    <button class="btn-xs-1 btn-orange">Request Shipment
+                    </button>
+                 </div>
+             </div>
+		     	<div class="row datatable">
+		     		<table id="datatable" class="table-striped table-bordered display" style="width:100%">
+        				<thead>
+            <tr>
+                <th>Top 65 ID<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                <th>Sales Order#<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                <th>Carrier<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                <th>Customer<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                <th>Origin<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                <th>Destination<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                <th>Status<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                <th class="none">Mode<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                <th class="none">Status<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                <th class="none">Date<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+            </tr>
+        				</thead>
+        				<tbody>
+           
+        				</tbody>
+    				</table>
+		     	</div>
+		     </div>
+		</div>
+	</div>
+</div>
+</body>
+
+<!-- Begin Plugin JS (Bootstrap3.0) -->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="./js/datatables.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+<!-- <script type="text/javascript" src="./js/mockup/data.js"></script> -->
+
+<script type="text/javascript">
+    var data = {
+    'order':[
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'123', 'sale_order':'1234456', 'carrier':'Old Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'', 'order-status':'Intransit', 'date':'05/07/2016'},
+    {'mode':'Van',    'status':'Active',   'ten65_id':'456', 'sale_order':'1232456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',      'destination':'', 'order-status':'Intransit', 'date':'04/08/2016'},
+    {'mode':'Van',    'status':'Inactive', 'ten65_id':'458', 'sale_order':'1234536', 'carrier':'Old Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'', 'order-status':'Intransit', 'date':'07/07/2015'},
+    {'mode':'Van',    'status':'Inactive', 'ten65_id':'254', 'sale_order':'1523456', 'carrier':'Old Carrier', 'origin':'Chicago,IL',   'customer':'James Jamie', 'destination':'', 'order-status':'Intransit', 'date':'04/12/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'125', 'sale_order':'1234956', 'carrier':'New Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'', 'order-status':'Intransit', 'date':'07/23/2016'},
+    {'mode':'Flatbed','status':'Active',   'ten65_id':'15',  'sale_order':'1273456', 'carrier':'Old Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'', 'order-status':'Intransit', 'date':'04/07/2014'},
+    {'mode':'Flatbed','status':'Active',   'ten65_id':'45',  'sale_order':'1263456', 'carrier':'Old Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',      'destination':'', 'order-status':'Intransit', 'date':'04/07/2016'},
+    {'mode':'LTL',    'status':'Inactive', 'ten65_id':'153', 'sale_order':'1234556', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'Intransit', 'date':'04/06/2016'},
+    {'mode':'Flatbed','status':'Active',   'ten65_id':'154', 'sale_order':'1233456', 'carrier':'Old Carrier', 'origin':'Los Angels,LA','customer':'James Jamie', 'destination':'Alaska,AL', 'order-status':'Intransit', 'date':'04/12/2016'},
+    {'mode':'Van',    'status':'Inactive', 'ten65_id':'158', 'sale_order':'1223456', 'carrier':'Old Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'Alaska,AL', 'order-status':'Intransit', 'date':'04/23/2016'},
+    {'mode':'Flatbed','status':'Active',   'ten65_id':'451', 'sale_order':'1231456', 'carrier':'Old Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'Intransit', 'date':'01/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'156', 'sale_order':'1234056', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'Alaska,AL', 'order-status':'Intransit', 'date':'12/07/2016'},
+    {'mode':'Bulk',   'status':'Active',   'ten65_id':'745', 'sale_order':'1923456', 'carrier':'Old Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'Intransit', 'date':'34/07/2016'},
+    {'mode':'Van',    'status':'Inactive', 'ten65_id':'158', 'sale_order':'1234856', 'carrier':'Old Carrier', 'origin':'Chicago,IL',   'customer':'James Jamie', 'destination':'Alaska,AL', 'order-status':'Intransit', 'date':'04/23/2006'},
+    {'mode':'Bulk',   'status':'Inactive', 'ten65_id':'721', 'sale_order':'1273456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'Intransit', 'date':'04/07/2014'},
+    {'mode':'LTL',    'status':'Inactive', 'ten65_id':'159', 'sale_order':'1236456', 'carrier':'Old Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'Tokyo,TK', 'order-status':'Intransit', 'date':'04/07/2017'},
+    {'mode':'Flatbed','status':'Active',   'ten65_id':'753', 'sale_order':'1253456', 'carrier':'Old Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',      'destination':'Alaska,AL', 'order-status':'Intransit', 'date':'04/02/2017'},
+    {'mode':'Van',    'status':'Active',   'ten65_id':'324', 'sale_order':'1233456', 'carrier':'Old Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'Intransit', 'date':'04/06/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'325', 'sale_order':'1234256', 'carrier':'New Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'Alaska,AL', 'order-status':'Intransit', 'date':'04/07/2016'},
+    {'mode':'Bulk',   'status':'Active',   'ten65_id':'395', 'sale_order':'1923456', 'carrier':'Old Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'Tokyo,TK', 'order-status':'Intransit', 'date':'04/27/2017'},
+    {'mode':'Van',    'status':'Active',   'ten65_id':'384', 'sale_order':'1237456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'Tokyo,TK', 'order-status':'Intransit', 'date':'12/07/2016'},
+    {'mode':'Bulk',   'status':'Active',   'ten65_id':'361', 'sale_order':'12536456', 'carrier':'Old Carrier', 'origin':'Chicago,IL',  'customer':'Jhone Davis', 'destination':'Alaska,AL', 'order-status':'Intransit', 'date':'04/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'328', 'sale_order':'1233456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'transit', 'date':'04/12/2016'},
+    {'mode':'Bulk',   'status':'Active',   'ten65_id':'954', 'sale_order':'1223456', 'carrier':'Old Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'Tokyo,TK', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Van',    'status':'Active',   'ten65_id':'854', 'sale_order':'1235456', 'carrier':'Old Carrier', 'origin':'Los Angels,LA','customer':'Joseph',      'destination':'New York,NY', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'146', 'sale_order':'1232456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',      'destination':'New York,NY', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Flatbed','status':'Active',   'ten65_id':'748', 'sale_order':'1323456', 'carrier':'New Carrier', 'origin':'Los Angels,LA','customer':'James Jamie', 'destination':'Tokyo,TK', 'order-status':'transit', 'date':'23/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'541', 'sale_order':'12342356', 'carrier':'New Carrier', 'origin':'Chicago,IL',  'customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'545', 'sale_order':'12323456', 'carrier':'New Carrier', 'origin':'Chicago,IL',  'customer':'Jhone Davis', 'destination':'Alaska,AL', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'654', 'sale_order':'1923456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',      'destination':'Alaska,AL', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'159', 'sale_order':'1234856', 'carrier':'New Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'transit', 'date':'12/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'756', 'sale_order':'1243456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'James Jamie', 'destination':'Alaska,AL', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Flatbed','status':'Active',   'ten65_id':'651', 'sale_order':'1223456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Van',    'status':'Active',   'ten65_id':'324', 'sale_order':'1235456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',      'destination':'Tokyo,TK', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Flatbed','status':'Active',   'ten65_id':'855', 'sale_order':'1023456', 'carrier':'New Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'New York,NY', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'111', 'sale_order':'1283456', 'carrier':'New Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'Tokyo,TK', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'LTL',    'status':'Active',   'ten65_id':'222', 'sale_order':'1234556', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',      'destination':'New York,NY', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Bulk',   'status':'Inactive', 'ten65_id':'333', 'sale_order':'2123456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Jhone Davis', 'destination':'Tokyo,TK', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Van',    'status':'Inactive', 'ten65_id':'784', 'sale_order':'1723456', 'carrier':'New Carrier', 'origin':'Los Angels,LA','customer':'Jhone Davis', 'destination':'Tokyo,TK', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Bulk',   'status':'Active',   'ten65_id':'555', 'sale_order':'1235456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',      'destination':'New York,NY', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Bulk',   'status':'Active',   'ten65_id':'666', 'sale_order':'1232456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',      'destination':'Tokyo,TK', 'order-status':'transit', 'date':'04/07/2016'},
+    {'mode':'Bulk',   'status':'Active',   'ten65_id':'888', 'sale_order':'1223456', 'carrier':'New Carrier', 'origin':'Chicago,IL',   'customer':'Joseph',       'destination':'Tokyo,TK', 'order-status':'transit', 'date':'04/07/2016'},
+    ]
+};
+
+    // Date Picker
+    $('.date-picker').datepicker();
+
+    // Create Category Filter by (status & mode)
+    $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        var category = $('#mode').val();
+        var status = data[6]; // use data for the status colume. Mode column is second column
+        if(category == ""){
+            return true;
+        }
+        else {
+            if(category == status){
+            	return true;
+            }
+            else{
+            	return false;
+            }
+        }
+    	}
+    );
+
+    // Create Range Date Filter
+    $.fn.dataTableExt.afnFiltering.push(
+        function( oSettings, aData, iDataIndex ) {
+            var iFini = $("#start-date").val();
+            var iFfin = $("#last-date").val();
+            var iDateCol = 8;
+            var date = aData[iDateCol];
+            if ( iFini === "" && iFfin === "" )
+            {
+                return true;
+            }
+            else if ( iFini <= date && iFfin === "")
+            {
+                return true;
+            }
+            else if ( iFfin >= date && iFini === "")
+            {
+                return true;
+            }
+            else if (iFini <= date && iFfin >= date)
+            {
+                return true;
+            }
+            return false;
+         }
+    );
+
+
+	$(document).ready(function() {
+        var order = data.order;
+    // Processing the table from JSON file.
+    for(var i = 0; i < order.length; i++) {
+       var tr = '<tr><td>'+order[i].ten65_id+'</td><td>'+order[i].sale_order+'</td><td>'+order[i].carrier+'</td><td>'+order[i].customer+'</td><td>'+order[i].origin+'</td><td>'+order[i].destination+'</td><td>'+order[i]['order-status']+'</td><td>'+order[i].mode+'</td><td>'+order[i].status+'</td><td>'+order[i].date+'</td></tr>';
+       $("#datatable tbody").append(tr);
+    }    
+    // Configurate Datatable
+    var table = $('#datatable').DataTable( {
+					responsive: true,
+					"dom": '<"row pull-right"f><"row"t><"row pull-right"lp>',
+				} );
+        // var table = $('#datatable').DataTable({
+        // 				responsive: true,
+        //                 "dom": '<"row pull-right"f><"row"t><"row pull-right"lp>',
+        //              });
+        // Execute the Category Filter by (status & mode)
+        $("#mode").change(function(){
+            table.draw();
+        });
+        // Execute the Range Date Filter
+        $("#start-date, #last-date").change(function(){
+            table.draw();
+        });
+    });
+    // Bind Search_demo and real Filter
+    $("#search_demo").keyup(function(){
+        $("#datatable_filter input[type='search']").val($(this).val());
+        $("#datatable_filter input[type='search']").keyup();
+    });
+
+</script>
+
+
+</html>

@@ -1,0 +1,910 @@
+/******************* Custom Font *******************/
+
+@font-face {
+    font-family: MontserratExtraLight;
+    src: url('../fonts/Montserrat-ExtraLight.otf');
+}
+
+@font-face {
+    font-family: MontserratRegular;
+    src: url('../fonts/Montserrat-Regular.otf');
+}
+@font-face {
+    font-family: MontserratLight;
+    src: url('../fonts/Montserrat-Light.otf');
+}
+@font-face {
+    font-family: ArialRegular;
+    src: url('../fonts/arial.ttf');
+}
+.size-14 {
+    font-size: 14px;
+}
+.size-16 {
+    font-size: 16px;
+}
+.size-18 {
+    font-size: 18px;
+}
+.size-20 {
+    font-size: 20px;
+}
+.size-24 {
+    font-size: 24px;
+}
+
+.font-reg{
+    font-family: "MontserratRegular";
+}
+
+.font-lig{
+    font-family: "MontserratLight";
+}
+
+.font-eli{
+    font-family: "MontserratExtraLight";
+}
+
+.pull-left{
+    float: left;
+}
+.both-side:after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+html body{
+    background-color: #2e3e51;
+    color: #203444;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], select{
+    background-color: transparent;
+    height: 56px;
+    border: 2px solid #c2c5c8;
+    border-radius: 10px;
+    font-family: Arial;
+}
+
+textarea.form-control {
+    background-color: transparent;
+    border: 2px solid #c2c5c8;
+    border-radius: 10px;
+    font-family: Arial;
+}
+
+button{
+    border: transparent;
+}
+
+button.btn-md{
+    border-radius: 10px;
+    font-weight: bold;    
+    font-size: 23px;
+    letter-spacing: 5px;
+    padding: 10px 35px 10px 35px;
+}
+
+button.btn-sm{
+    
+}
+
+button.btn-xs{
+    padding: 7px 20px;
+    font-size:16px;
+    border-radius: 4px;
+}
+
+.btn-xs-1{
+    padding: 6px 20px;
+    font-size: 16px;
+    font-family: "MontserratRegular";
+    border-radius: 4px;
+}
+
+button.btn-orange{
+    background-color: #f8620c; 
+    color: white;    
+}
+
+button.btn-dark{
+    background-color: #2e3e51; 
+    color: white;    
+}
+button.btn-default{
+    color: #dfdfe1;
+}
+.btn-orange:hover{
+    color: white;
+}
+.form-group label{
+    color: #f8620c;
+    font-size: 17px;
+    font-family: "ArialRegular";
+}
+
+.no-radius{
+    border-radius: 0px;
+}
+
+.no-left-padding{
+    padding-left: 0px;
+}
+.no-right-padding{
+    padding-right: 0px;
+}
+
+/*=============================== Page Header =======================*/
+div.page-header{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: transparent;
+    background-color: #203444;
+    min-height: 75px;
+    height: 75px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+div.page-logo {
+    float: left;
+}
+
+div.top-menu ul.nav{
+    display: block;
+    list-style: none;
+}
+
+div.top-menu ul.nav li{
+    display: inline-block;
+}
+
+div.top-menu ul.nav>li>a{
+    padding: 0px;
+    color: white;
+}
+div.top-menu ul.nav>li>a span{
+    line-height: 35px;
+}
+div.top-menu ul.nav>li>a:hover{
+    background-color: transparent;
+    color: white;
+}
+
+div.top-menu ul li a .badge{
+    font-size: 12px;
+    position : absolute;
+    bottom: -5px;
+    right: -10px;
+    background-color: #f8620c;
+    line-height: 12px!important;
+}
+
+div.top-menu ul li{
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+div.top-menu ul li:last-child a{
+    padding-top: 9px;
+}
+div.top-menu ul li a:hover{
+    background: transparent;
+}
+div.clearfix:before{
+    display: table;
+    content:"";
+}
+
+
+/*========================== Page Container ==============================*/
+div.page-container {
+    margin-top: 0px;
+    width: 100%;
+}
+
+
+/* ========================= Page Sidebar =========================*/
+div.page-container div.page-sidebar {
+    position: relative;
+    background-color: #2e3e51;
+    width: 222px;
+    padding: 0px;
+    margin-right: -100%;
+    float: left;
+    z-index: 10;
+}
+
+div.page-container div.page-sidebar ul.page-sidebar-menu{
+    padding-left: 0px;
+    list-style: none;
+}
+
+div.page-container div.page-sidebar ul.page-sidebar-menu li{
+    position: relative;
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    border-bottom: rgba(255,255,255,0.15) solid 1px;
+    font-size: 20px;
+    font-family: "MontserratExtraLight";
+}
+div.page-container div.page-sidebar ul.page-sidebar-menu li.active{
+    background-color: #f8620c;
+    font-family: "MontserratRegular";
+}
+div.page-container div.page-sidebar ul.page-sidebar-menu li a{
+    color: white;
+    text-decoration: none;
+}
+div.page-container div.page-sidebar ul.page-sidebar-menu li a > .selected{
+    display: block;
+    background-image: none;
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: none;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 30px solid #ededed;
+}
+
+@media screen and (max-width: 1024px){
+    div.page-container div.page-content-wrapper div.page-content{
+        margin-left: 0px;
+    }
+    .page-header .menu-toggler.responsive-toggler {
+    display: inline-block;
+    }
+    .page-header .menu-toggler.responsive-toggler {
+        float: right;
+        margin: 8px 6px 0 6px;
+    }
+    .page-header .menu-toggler:hover {
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+    .page-header .menu-toggler {
+        background-image: url(../images/toggle-menu.png);
+    }
+    .page-header .menu-toggler {
+        display: block;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    div.page-content-wrapper{
+        float: none!important;
+    }
+    .page-sidebar{
+        width: 100%!important;
+        float: none;
+        display: none;
+    }
+    .page-sidebar[aria-expanded="true"]{
+        display: block;
+    }
+    .page-sidebar[aria-expanded="false"]{
+        display: none!important;
+    }
+    div.top-menu ul li:last-child{
+        margin-right: 30px;
+    }
+}
+@media (max-width: 767px){
+        .page-header .top-menu {
+            display: block;
+            clear: both;
+        }
+        .page-header .top-menu ul.navbar-nav{
+            margin-top: 20px;
+            float:right!important;
+        }
+        .page-header .top-menu ul.navbar-nav li{
+            margin-left:10px;
+        }
+        .page-header .top-menu ul.navbar-nav .size-24, .size-20{
+            font-size: 16px;
+        }
+}
+/* =============================== Page Content ============================*/
+div.page-content-wrapper{
+    float: left;
+    width: 100%;
+}
+
+div.page-content-wrapper div.page-content{
+    background-color: #ededed;
+    margin-left: 222px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+/* ============================== Page menu bar ============== */
+div.page-top-bar{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    padding-left: 0px;
+}
+
+div.page-top-bar:before{
+    content: " ";
+    display: table;
+}
+div.page-top-bar:after{
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+div.page-top-bar div.page-name{
+    float: left;
+}
+
+div.page-top-bar div.page-menu ul{
+    list-style: none;
+    display: block;
+}
+
+div.page-top-bar div.page-menu ul li {
+    margin-left: 25px;
+    float: left;
+}
+
+div.page-top-bar div.page-menu ul li a {
+    position: relative;
+    color: #203444;
+    text-decoration: none;
+}
+
+
+
+
+/* =================== Page Body =====================*/
+div.page-body{
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 4px;
+    min-height: 850px;
+}
+
+div.page-body .form-control {
+    font-family: "MontserratLight";
+}
+
+div.page-body div.row {
+    margin: 0px;
+}
+
+div.page-body div.form-inline div.form-group{
+    margin-right: 30px;
+}
+div.page-body div.form-inline div.form-group:last-child{
+    margin-right: 0px;
+}
+
+div.page-body .table-form{
+    height: 30px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: #c2c2c2 solid 1px;
+}
+div.page-body .form-group span{
+    color: #c2c2c2;
+}
+div.page-body .form-group input{
+    margin-right: 10px;
+}
+.form-control-feedback{
+    line-height: 30px;
+    right: 10px;
+}
+
+select.form-control{
+    font-size: 16px!important;
+    border: transparent!important;
+}
+
+.form-control.dark{
+    background-color: #2e3e51;
+    border: transparent;
+    color: white;
+}
+
+#datatable_filter{
+    visibility: hidden;
+}
+
+table#datatable>thead>tr>th{
+    vertical-align: center!important;
+}
+
+div.page-body table{
+    border-color: transparent;
+}
+
+div.page-body table th i{
+    position: absolute;
+    right: 10px;
+}
+
+@media screen and (max-width: 1280px){
+    div.page-body table th i{
+        right: 2px;
+    }
+}
+
+div.page-body tr.child td.child i.asc, div.page-body tr.child td.child i.desc{
+    display: none;
+}
+div.page-body table th i.asc{
+    top: 10px;
+}
+
+div.page-body table th i.desc{
+    bottom: 10px;
+}
+
+div.page-body table th.sorting_asc i.asc{
+    visibility: hidden;
+}
+
+div.page-body table th.sorting_desc i.desc{
+    visibility: hidden;
+}
+
+div.page-body table td, th{
+    position: relative;
+    text-align: center;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div.page-body table thead{
+    background-color: #f8620c;
+    color: white;
+    font-size: 18px;
+    font-family: "MontserratLight";
+}
+
+div.page-body table tbody{
+    color: #2e3e51;
+    font-size: 14px;
+    font-family: "MontserratLight";
+}
+
+div.page-body table td{
+    border-spacing: none;
+    border-collapse: collapse;
+    border: transparent;
+    padding-top: 15px;
+}
+
+div.page-body table thead th{
+    border-spacing: none;
+    border-collapse: collapse;
+    border: transparent;
+}
+
+div.page-body .table-striped>tbody>tr:nth-of-type(even){
+    background-color: #f1eff0;
+}
+
+div.page-body .table-striped>tbody>tr:nth-of-type(odd){
+    background-color: white;
+}
+
+#datatable_length{
+    float:left;
+    margin-top: 20px;
+}
+
+div#datatable_wrapper #datatable_length label{
+    font-size:14px;
+    font-family: "MontserratLight";
+}
+
+div#datatable_wrapper #datatable_length select{
+    background-color: #2e3e51;
+    border: transparent;
+    color: white;
+    border-radius: 4px;
+}
+
+#datatable_paginate{
+    float:left;
+}
+
+#datatable_paginate ul.pagination li a{
+    border-radius: 4px;
+    padding-top: 4px;
+    margin-left: 10px;
+    padding-bottom: 4px;
+    font-size: 16px;
+    color: #2e3e51;
+    border: #c7c7c7 solid 1px;
+
+}
+
+#datatable_paginate ul.pagination li.previous a{
+    background-color: #2e3e51;
+    border: transparent;
+    color: white;
+}
+
+#datatable_paginate ul.pagination li.next a{
+    background-color: #2e3e51;
+    border: transparent;
+    color: white;
+}
+
+#datatable_paginate ul.pagination li.active a{
+    background-color: #f1eff0;
+    border: #f1eff0 solid 1px;
+
+}
+
+@media screen and (max-width:1440px){
+    #datatable thead th{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:992px){
+    #datatable thead th{
+        font-size: 11px;
+    }
+    #datatable tbody td{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 767px){
+    #datatable_wrapper .pull-right{
+        float:none!important;
+    }
+    #datatable_wrapper .pull-right>div{
+        float:none!important;
+    }
+}
+@media screen and (max-width: 480px){
+    #datatable_paginate ul.pagination li a{
+        margin-left:3px;
+        font-size: 12px;
+    }
+}
+.table-scrollable {
+    width: 100%;
+    overflow-x: auto; 
+    overflow-y: hidden;
+    border: 1px solid #dddddd;
+    margin: 10px 0 !important;
+}
+
+/* =================================== Index Page ======================================= */
+div.dashboard table th:nth-child(8){
+    display: none;
+}
+div.dashboard table th:nth-child(9){
+    display: none;
+}
+div.dashboard table tr td:nth-child(8){
+    display: none;
+}
+div.dashboard table tr td:nth-child(9){
+    display: none;
+}
+@media screen and (max-width: 1390px){
+    .form-inline .form-group{
+        display: block;
+        margin-bottom: 15px;
+        position: relative;
+        margin-right: 0px!important;
+    }
+    .form-inline .form-group input{
+        width: 100%;
+    }
+    .form-inline .form-group span{
+        position: absolute;
+        right: 0px;
+        width: 34px;
+        height: 34px;
+        right:10px;
+        top: 5px!important;
+        text-align: center;
+        line-height: 20px;
+    }
+}
+@media screen and (min-width: 768px){
+    table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
+        visibility: hidden;
+    }
+}
+
+
+/* =================================== Carrier page - Page Body ========================= */
+div.carrier div.form-inline div.form-group{
+    margin-right: 10px;
+}
+
+div.carrier table th:first-child{
+    text-align: left;
+}
+
+div.carrier table tr td:first-child{
+    text-align: left;
+}
+/* ==================================== Customer Page - page body ========================*/
+
+div.customer #datatable_wrapper #datatable_length select{
+    border-radius: 3px;
+}
+
+div.customer #datatable_paginate ul.pagination li a{
+    border-radius: 3px;
+}
+
+div.customer table tr td:last-child a{
+    color: #2e3e51;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+div.customer table thead th:last-child i{
+    display: none;
+}
+div.customer .form-inline .form-group{
+    display: inline-block;
+}
+@media screen and (max-width: 485px){
+    div.customer .form-inline .form-inline.pull-right{
+        float: left!important;
+    }
+}
+
+
+/* ===================================== Create Customer Page - page body =================*/
+div.create-customer{
+    padding: 40px 45px;
+}
+div.create-customer div.col-md-12{
+    margin-top: 20px;
+}
+@media screen and (max-width: 767px){
+    div.create-customer .no-left-padding{
+        padding-right:0px!important;
+    }
+    div.create-customer .no-right-padding{
+        padding-left: 0px!important;
+    }
+    div.create-customer .address{
+        padding-left: 0px!important;
+    }
+    div.state{
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+}
+@media screen and (max-width: 499px){
+    div.create-customer button{
+        width:100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* ==================== Login Page & Forgot Password Page & Profile Page ============================*/
+div.bg{
+    padding-top: 1px;
+    width:100%;
+    height:100%;
+    background: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div.white-panel{
+    background-color: white;
+    box-shadow: 12px 12px 35px #8b8b8b35;
+    padding: 85px 85px 125px 85px;
+    border-radius: 4px;
+}
+
+@media screen and (orientation: portrait){
+    div.white-panel{
+        margin-top: 25%!important;
+    }
+}
+
+@media screen and (min-width: 1441px){
+    div.white-panel{
+        width: 40%;
+        margin-top: 120px;
+        margin-left: 30%;
+        margin-right: 30%; 
+    }
+}
+@media screen and (max-width: 1440px) and (min-width: 1141px){
+    div.white-panel{
+        width: 50%;
+        margin-top: 120px;
+        margin-left: 25%;
+        margin-right: 25%; 
+    }
+}
+
+@media screen and (max-width: 1140px) and (min-width: 768px){
+    div.white-panel{
+        width: 70%;
+        margin-top: 120px;
+        margin-left: 15%;
+        margin-right: 15%; 
+    }
+}
+@media screen and (max-width: 767px){
+    div.white-panel{
+        width: 90%;
+        margin-top: 120px;
+        margin-left: 5%;
+        margin-right: 5%; 
+    }
+}
+
+@media screen and (max-width: 599px){
+    div.white-panel{
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    div.profile hr{
+        width: 100%!important;
+        margin-left: 0px!important;
+    }
+}
+/* ============================== Login Page =========================== */
+div.logo{
+    text-align: center;
+}
+
+
+div.white-panel .information .action{
+    margin-top: 35px;
+}
+
+div.white-panel .information a{
+    font-family: "ArialRegular";
+    float: right;
+    margin-top: 15px;
+    color: #f8620c;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 360px){
+    .action button{
+        width: 100%;
+    }
+    .action a{
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ======================================= Forgot Password Page =================================  */
+
+div.white-panel div.title{
+    text-align: center;
+}
+div.title h1{
+    font-family: "MontserratRegular";
+    font-size: 38px;
+    color: #111d2a;
+}
+
+
+/* ======================================== Complete Profile Page ================================ */
+@media screen and (max-width: 991px){
+    body.complete-profile{
+        height: auto!important;
+    }
+    div.profile{
+        margin-bottom: 75px;
+    }
+    div.profile div.information div.form-group{
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+}
+
+div.profile {
+    margin-top: 75px;
+    padding-top: 70px;
+    padding-left: 75px;
+    padding-bottom: 80px;
+    padding-right: 75px;
+}
+div.profile hr{
+    width: calc( 100% + 150px );
+    margin-left: -75px;
+}
+
+div.profile h1{
+    font-size: 38px;
+    font-family: "MontserratRegular";
+    color: #1a2736;
+    font-weight: bold;
+
+}
+
+div.company-info .info-title{
+    font-family: "ArialRegular";
+    font-size: 17px;
+    color: #b2b2b2;
+}
+
+div.company-info .info-content{
+    font-family: "ArialRegular";
+    font-size: 17px;
+    color: #1a2736;
+}
+
+div.information-header:after{
+    display: table;
+    content: "";
+    clear: both
+}
+
+div.information-header h2{
+    font-size: 28px;
+    font-family: "MontserratRegular";
+    color: #1a2736;
+    font-weight: bold;
+    float: left;
+}
+
+div.profile div.col-md-12 {
+    margin-top: 15px;
+    padding: 0px;
+}
+
+div.profile div.col-md-12>div.form-group:first-child{
+    padding-left: 0px;
+}
+
+div.profile div.col-md-12>div.form-group:last-child{
+    padding-right: 0px;
+}
+
+
+div.information-header button{
+    margin-top: 15px;
+}
+
+div.profile div.action {
+    margin-top: 15px;
+}
+
+@media screen and (max-width:449px){
+    div.profile h1{
+        font-size: 24px;
+    }
+    div.information-header h2{
+        font-size: 20px;
+    }
+    div.company-info .info-title, .info-content{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:375px){
+    .pull-right{
+        float: left!important;
+    }
+}
+
+/* ==================================  

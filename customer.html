@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<title>Ten65 | Dashboard</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+
+<!-- Begin Plugin Styles (Bootstrap 3.0) -->
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/datepicker3.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
+
+<!-- Begin custom styles -->
+<link rel="stylesheet" href="./css/style.css" />
+
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body class="">
+<!-- Page Header -->
+<div class="page-header">
+	<div class="page-header-inner">
+		<!-- Page Header Logo -->
+		<div class="page-logo">
+			<a href="index.html">
+			<img src="./images/logo.png" alt="logo" class="logo-default"/>
+			</a>
+			<div class="menu-toggler sidebar-toggler hide">
+			</div>
+		</div>
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<div class="top-menu">
+			<ul class="nav navbar-nav pull-right">
+				<li class="dropdown dropdown-extended"><a><span class="size-20"><i class="fa fa-bell-o"></i><span><span class="badge">4</span></a></li>
+                <li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><span class="size-24 font-eli">Steel Good Service  <i class="fa fa-angle-down"></i></span></a>
+                </li>               
+                <li><a><img src="./images/signin.png" /></a></li>		
+				
+				<!-- END INBOX DROPDOWN -->
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+<!-- Page Container -->
+<div class="page-container">
+	<!-- Page Sidebar -->
+	<div class="page-sidebar navbar-collapse">
+		<ul class="page-sidebar-menu" >
+			<li>
+				<a href="index.html">
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="carriers.html">
+					<span>Carriers</span>
+				</a>
+			</li>
+			<li  class="active">
+				<a href="">
+					<span>Customer</span>
+                    <span class="selected"></span>
+				</a>
+			</li>
+			<li>
+				<a href="carrier.html">
+					<span>Carrier Rates</span>
+				</a>
+			</li>
+			<li>
+				<a href="billing.html">
+					<span>Billing</span>
+				</a>
+			</li>
+			<li>
+				<a href="kpis.html">
+					<span>KPIs</span>
+				</a>
+			</li>
+			<li>
+				<a href="doc-hub.html">
+					<span>Doc Hub</span>
+				</a>
+			</li>
+			<li>
+				<a href="live-tracking.html">
+					<span>Live Tracking</span>
+				</a>
+			</li>
+			<li>
+				<a href="fav-driver.html">
+					<span>Fav Driver</span>
+				</a>
+			</li>
+			<li>
+				<a href="api-center.html">
+					<span>API Center</span>
+				</a>
+			</li>
+			<li>
+				<a href="help.html">
+					<span>Help</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- Page Content -->
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			 <!-- Page Menu bar -->
+		     <div class="page-top-bar">
+		     	<div class="page-name">
+		     		<span class="size-20 font-reg">Customer</span>
+		     	</div>
+		     </div>
+		     <!-- Page Body -->
+		     <div class="page-body customer">
+             <div class="row form-inline">
+                 <div class="form-group">
+                    <button class="btn-xs-1 btn-orange">Invite New Customer
+                    </button>
+                 </div>
+                 <div class="form-inline pull-right">
+                    <div class="form-group pull-left" style="margin-right: 2px;">
+                        <button class="btn-xs-1 btn-dark">Import
+                        </button>
+                    </div>
+                    <div class="form-group pull-left">
+                        <button class="btn-xs-1 btn-dark">Export
+                        </button>
+                    </div>
+                 </div>
+             </div>
+		     	<div class="row datatable">
+		     		<table id="datatable" class="table-striped table-bordered display" style="width:100%">
+        				<thead>
+                            <tr>
+                                <th>Customer ID<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                                <th>Customer Name<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                                <th>E-mail<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                                <th>Location<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                                <th>Contact Number<i class="fa fa-angle-up asc"></i><i class="fa fa-angle-down desc"><i></th>
+                                <th>Actions</th>
+                            </tr>
+        				</thead>
+        				<tbody>
+           
+        				</tbody>
+    				</table>
+		     	</div>
+		     </div>
+		</div>
+	</div>
+</div>
+</body>
+
+<!-- Begin Plugin JS (Bootstrap3.0) -->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="./js/datatables.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+
+<script type="text/javascript">
+    var data = {
+   
+    'origin': [
+{'customerid':'123', 'customer':'Jhone Davis', 'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'456', 'customer':'Joseph',     'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'458', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'254', 'customer':'James Jamie','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'125', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'15',  'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'45',  'customer':'Joseph',     'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'153', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'154', 'customer':'James Jamie','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'158', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'451', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'156', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'745', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'158', 'customer':'James Jamie','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'721', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'159', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'753', 'customer':'Joseph',     'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'324', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'325', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'395', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'384', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'361', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'328', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'954', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'854', 'customer':'Joseph',     'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'146', 'customer':'Joseph',     'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'748', 'customer':'James Jamie','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'541', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'545', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'654', 'customer':'Joseph',     'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'159', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'756', 'customer':'James Jamie','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'651', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'324', 'customer':'Joseph',    'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'855', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'111', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'222', 'customer':'Joseph',    'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'333', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'784', 'customer':'Jhone Davis','email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'555', 'customer':'Joseph',    'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'666', 'customer':'Joseph',    'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'},
+{'customerid':'888', 'customer':'Joseph',     'email':'JhoneDivis@gmail.com', 'location':'New York, NY','contact-number':'98345612'}
+]
+};
+
+
+    // Create Category Filter by (status & mode)
+    
+
+    
+
+    $(document).ready(function() {
+        var customers = data.origin;
+    // Processing the table from JSON file.
+        for(var i = 0; i < customers.length; i++) {
+            var tr = '<tr><td>'+customers[i].customerid+'</td><td>'+customers[i].customer+'</td><td>'+customers[i].email+'</td><td>'+customers[i].location+'</td><td>'+customers[i]['contact-number']+'</td><td><a><i class="fa fa-pencil"></i></a><a><i class="fa fa-trash"></i></a></td></tr>';
+            $("#datatable tbody").append(tr);
+        }
+
+    // Configurate Datatable
+        var table = $('#datatable').DataTable({
+        				responsive: true,
+                        "dom": '<"row pull-right"f><"row table-scrollable"t><"row pull-right"lp>'
+        });
+        
+    });
+
+</script>
+
+
+</html>
